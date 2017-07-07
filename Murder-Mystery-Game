@@ -1,0 +1,67 @@
+start = "..."
+location = "Hallway"
+print("Before you choose your character here are some instructions. When typing characters names capitalize the first letter, when in a room type key words in all caps, for example, forward, search, upstairs, etc. " )
+user_input = input("Pick your character you may choose Iman, Annie, Saloni, or Abby ")
+
+if user_input =="Iman":
+    print ("Good Choice! Your weapon is a bike wrench.")
+if user_input =="Annie":
+    print ("Good Choice! Your weapon is a paper ninja star.")
+if user_input =="Saloni":
+    print ("Good Choice! Your weapon is a selfie stick.")
+if user_input =="Abby":
+    print ("Good Choice! Your weapon is a gun.")
+
+print(start)
+
+entervar = input("*ominous voice* Do you want to enter the mansion? ")
+if entervar == "yes":
+    print("Now that youu choose to enter you may not leave.")
+if entervar == "no":
+    print("Tough luck here you are in the mansion, enjoy your stay.")
+
+print("You enter the house and you are in a large hallway.")
+firstmove = input("Do you want to go left or right? ")
+if firstmove == "left":
+    print ("You moved to the left and went into the Dining Room.")
+    location = "Dining Room"
+elif firstmove == "right":
+    print ("You moved right and went into the Living Room.")
+    location = "Living Room"
+
+if location == "Dining Room":
+    print("The lights begin to flicker in the Dining Room and Zoe, the avid screamer, screams.")
+if location == "Living Room":
+    print("The lights begin to flicker in the Living Room and Zoe, the avid screamer, screams.")
+
+print("Theres been a murder...and it is up to you to find out who done it!")
+print("In order to solve the murder you can search the rooms for clues. How would you like to proceed?")
+
+if location == "Dining Room":
+    searchfromdr = input("From here you can search the Dining Room, go forward to the Kitchen or exit through the back and go to the pool. ")
+    if searchfromdr == "search":
+        print("As you search the Dining Room you find an oragami swan...which belongs to Annie.")
+        print("You go and confront her and she confesses to being the murderer.")
+        print("THE END.")
+    elif searchfromdr == "forward":
+        print("You go forward into the Kitchen.")
+        location = "Kitchen"
+        print("You search the Kitchen and find tire tracks leading to the crime scene outside.")
+        print("You know the bike belongs to Iman and you find her with a bike wrench in hand, she immediately confesses to the murder.")
+        print("THE END.")
+    elif searchfromdr == "exit":
+        print("As you head out the back door to the pool you search for a weapon.")
+        print("Then in the water...you see it! A water gun in the deep end of the pool. With previous knowledge of Abby's love for water guns you go and confront her. After some talking you find out she's guilty.")
+        print("THE END.")
+
+if location == "Living Room":
+    searchfromlr = input("From here you can search the Living Room or go upstairs to the Attic. ")
+    if searchfromlr == "search":
+        print("As you search the Living Room you find a polaroid picture with a red line drawn on the back.")
+        print("You know the picture belngs to Saloni because of her well known murderer red line signature found on the back.")
+        print("fun fact: 19 crimes take place on the redline train in Chicago daily.")
+        print("THE END.")
+    if searchfromlr == "upstairs":
+        print("You go upstairs to the Attic and find a friendship bracelet on the ground.")
+        print("Knowing that Laura had recently made Allie a friendship bracelet you suspected Allie instantly, as you confront her you notice her bracelet is missing from her wrist. After questioning her you know that Allie is guilty.")
+        print("THE END.")
